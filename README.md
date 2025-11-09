@@ -1,46 +1,45 @@
-# 🧠 Notice Flow AI v2  
+#  Notice Flow AI v2  
 **Smart Institutional Notice & Circular Generator**
 
 ---
 
-## 📘 Overview  
+##  Overview  
 **Notice Flow AI v2** is an intelligent web-based system that enables colleges and organizations to **create, customize, and export official notices or circulars** within minutes.  
 
 The tool automates document formatting, integrates signatory management (with digital signatures), and supports one-click **PDF/DOCX exports** — providing a professional and consistent output aligned with institutional standards.
 
 ---
 
-## 🌟 Core Features  
+##  Core Features  
 
-### 🧾 **1. AI-Driven Notice Generation**  
+###  **1. AI-Driven Notice Generation**  
 - Auto-generates formatted notice text via a **local AI server (`generate-notice` endpoint)**.  
 - Supports both *Notice* and *Circular* templates.  
 - Dynamically fills **Reference Number**, **Date**, and **Subject** fields.  
 
-### 🖋️ **2. Advanced Signatory Manager**  
+###  **2. Advanced Signatory Manager**  
 - Add, upload, or delete signatories with live table updates.  
 - Upload signature images directly or draw using a signature canvas.  
 - Signatories persist in **localStorage**, eliminating re-entry on reload.  
 - Integrated **delete button** beside dropdown for quick removal.  
 
-### 🎨 **3. Modern Interface & Dual Themes**  
+###  **3. Modern Interface & Dual Themes**  
 - Elegant **Playfair Display + Roboto** typography.  
 - Clean, card-based layout with smooth transitions.  
 - Supports **Dark/Light Mode toggle** for accessibility.  
 
-### 📄 **4. Export Options**  
+###  **4. Export Options**  
 - **PDF Export:** Clean, print-ready official format via `html2pdf.js`.  
 - **Word (.docx) Export:** Preserves layout for institutional editing.  
 - Auto-formats header banners and signatures in both outputs.  
 
-### 💾 **5. Persistent Local Storage**  
+###  **5. Persistent Local Storage**  
 - All signatories, roles, and signatures stored in the browser.  
 - Safe reloads: data remains intact across sessions.  
 
 ---
 
-## 🧩 Project Structure  
-
+##  Project Structure  
 Notice Flow AI v2/
 │
 ├── index.html # Main UI layout and structure
@@ -51,36 +50,36 @@ Notice Flow AI v2/
 └── /assets/
 └── headerBanner.jpg # Official institutional header
 
-yaml
-Copy code
+
 
 ---
 
-## ⚙️ Setup Instructions  
+##  Setup Instructions  
 
-### 🔧 Prerequisites  
+### Prerequisites  
 - **Node.js** (v16+ recommended)  
 - **VS Code / Browser** (Chrome, Edge, or Brave)  
 
-### 🧠 Local AI Backend Setup  
+### Local AI Backend Setup  
 1. Open the folder in VS Code.  
 2. Navigate to the server folder:  
    ```bash
    cd server
    npm install
-Start the server:
+3.Start the server:
 
-bash
-Copy code
-npm start
-You should see:
+      npm start
 
-pgsql
-Copy code
-> smartnotice-pro-server@1.0.0 start
+
+4.You should see:
+
+> > smartnotice-pro-server@1.0.0 start
 > node server.js
 SmartNotice Backend running on http://localhost:3000
-🖥️ Frontend Usage
+
+
+## Frontend Usage
+
 Open index.html directly in your browser.
 
 Fill in all notice fields.
@@ -91,8 +90,9 @@ Click Generate Notice to preview.
 
 Export as PDF or DOCX with one click.
 
-🧑‍💻 Developer Guide
-🧱 Built With
+
+## Developer Guide
+ Built With
 Component	Technology
 Frontend UI	HTML5, CSS3 (Flexbox + Transitions)
 Logic / State	Vanilla JavaScript (Event-driven)
@@ -101,16 +101,18 @@ Exports	html2pdf.js & Custom HTML-to-Word engine
 Storage	Browser LocalStorage
 Fonts	Playfair Display, Roboto
 
-📷 Screenshot Placeholders
-baadme add krenge 
+##Screenshot 
+
+Screenshots to be added later
 
 Interface	Description
-🖥️ Dashboard	Notice creation and input form
-🖋️ Signatory Table	Role selection, signature upload, and delete button
-🌓 Dark Mode	Enhanced readability in low-light environments
-📄 Generated Notice	Final formatted output ready for export
+ Dashboard	Notice creation and input form
+ Signatory Table	Role selection, signature upload, and delete button
+ Dark Mode	Enhanced readability in low-light environments
+ Generated Notice	Final formatted output ready for export
 
-🧰 Developer Notes
+## Developer Notes
+
 All signatory edits auto-sync with dropdown & table.
 
 Exports are optimized for print fidelity and document standards.
@@ -119,11 +121,9 @@ Uses data URLs for signature image embedding in exports.
 
 Modular code for future integration with institutional APIs or cloud storage.
 
-👥 Contributors & Credits
-Project Lead: — KC 
+## Contributors & Credits
+
+Project Lead: —KC
 Development: Frontend + Backend integration using Vanilla JS & Node.js
 Design: Modern institutional document aesthetic, dark/light adaptive theme
 Special Thanks: VPPCOE Faculty & Dept. of Computer Engineering
-
-📜 License
-MIT License — You are free to use, modify, and distribute this project for educational or institutional purposes.
