@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notice Flow AI </title>
 
-    <link rel="stylesheet" href="newstyle.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- html2pdf.js for PDF download -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
@@ -68,14 +68,44 @@
                 </div>
 
             </div>
-            <label for="signatories">Select Signatories (Ctrl/Cmd + Click for multiple)</label>
-                <select id="signatories" multiple size="5" title="Hold Ctrl/Cmd to select multiple roles.">
-                    <option value="Principal">Principal (Essential for policy)</option>
+                        <!-- Combined Signatories Section -->
+            <div class="input-group combined-signatory-section">
+            <label for="signatories" class="signatory-label">
+                Select Signatories & Manage Signatures
+                <small>(Ctrl/Cmd + Click for multiple)</small>
+            </label>
+
+            <!-- Signatory Selection
+            <select id="signatories" multiple size="5" title="Hold Ctrl/Cmd to select multiple roles.">
+                <option value="Principal">Principal </option>
+                <option value="HOD">HOD, Computer Engineering Dept.</option>
+                <option value="Exam_Coordinator">Exam Coordinator</option>
+                <option value="Academic_Coordinator">Academic Coordinator</option>
+            </select> -->
+
+                <!-- === Signatory Selection === -->
+                <div class="signatory-select-container">
+                <label for="signatories">Select Signatories (Ctrl/Cmd + Click for multiple)</label>
+                <div class="signatory-select-wrapper">
+                    <select id="signatories" multiple size="5" title="Hold Ctrl/Cmd to select multiple roles.">
+                    <option value="Principal">Principal</option>
                     <option value="HOD">HOD, Computer Engineering Dept.</option>
                     <option value="Exam_Coordinator">Exam Coordinator</option>
                     <option value="Academic_Coordinator">Academic Coordinator</option>
-                </select>
+                    </select>
+                    <button id="delete-signatory-btn" title="Delete selected signatory">🗑️</button>
+                </div>
+                </div>
+
+<!-- Dynamically filled table for selected signatories -->
+<div id="signatory-table" class="sign-table"></div>
+
+
+            <!-- Inline Table for uploads/deletes -->
+            <div id="signatory-table" class="sign-table"></div>
             </div>
+
+
             
             <!-- New Signatory Input Section as dropdown -->
             <div class="input-group" style="margin-bottom: 30px;">
@@ -96,7 +126,7 @@
                     </div>
                 </details>
             </div>
-
+            
             <button class="generate-btn" onclick="generateNotice()"> Generate Document ↵ </button>
         </section>
 
